@@ -1,0 +1,31 @@
+1.从github上下载代码到本地
+	git clone [地址]
+	
+2.对新增的文件进行查看
+	git status
+	
+3.对新增的文件进行跟踪
+	git add [文件名]
+	
+4.提交
+	4.1 git commit
+	4.2 写说明
+	
+5.提交到推送github上
+	git push
+	
+6. fg  查看是否有任务
+
+7.拉取最新的代码
+	git pull
+	
+8.查看日志	git log
+
+9.回退到版本 git reset --hard 【10asd1233234234111】
+
+10.查看版本之前最新的 git reflog
+
+10.回到未来 git reset --hard 【10asd】
+	
+
+	

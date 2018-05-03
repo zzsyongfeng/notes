@@ -1,0 +1,45 @@
+﻿Git的使用：
+	1.下载安装
+	2.开始菜单里找到“Git”->“Git Bash”
+	3.设置用户名和邮箱作为ID
+		$ git config --global user.name "Your Name"
+		$ git config --global user.email "email@example.com"
+			注意：--global参数 表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址
+	4.创建一个目录当仓库repository（windows上路径名不要有中文）
+	5.在创建的目录下右键Git Bash Here，输入：git init
+		通过git init命令把这个目录变成Git可以管理的仓库
+	6.在当前创建一个文件
+		第一步，用命令git add告诉Git，把文件添加到仓库
+		git add readme.txt
+		第二步，用命令git commit告诉Git，把文件提交到仓库：-m后面是提交的内容
+		git commit -m "wrote a readme file"
+	7.修改文件后查看运行结果
+		git status 查看哪些文件被修改了
+		git diff readme.txt 查看文件的哪些内容被修改了
+		git add readme.txt
+		git status 
+		git commit -m "add distributed"
+		
+git和github配合使用：
+	1.使用git在github上下载代码：git clone https://github.com/feicui-android/Hello-World.git
+	2.查看提交记录：git log
+	3.本地修改代码：
+		1）下载新代码：git pull
+		2）从master出捡出一个新的分支：git checkout -b feature。feature是分支名称，你可以随意取名，但请用英文。
+		3）在feature分支上随意修改，改完后你可以提交你的修改：git commit -m "some message"。
+		4）此时要同步代码，请先切回主分支：git checkout master，然后更新git pull。
+		5）如果想删除自己建立的分支，使用git branch -D feature，注意执行此命令后分支被强制删除，无法恢复。
+	
+	4.使用git在github上传代码：初始化git仓库：git init
+	5.在本地创建ssh key：ssh-keygen -t rsa -C "your_email@youremail.com"（不设置密码）
+	6.找到本机打开id_rsa.pub，复制里面的key在github上的设置中添加ssh key。
+	7.验证是否成功，在git bash输入：ssh -T git@github.com
+	8.设置用户名和邮箱方便上传记录：
+		git config --global user.name "your name"
+		git config --global user.email "your_email@youremail.com"
+	9.添加远程地址：git remote add origin git@github.com:yourName/yourRepo.git
+	10.提交上传：
+		1）创建文件，添加：git add readme.md
+		2）提交文件：git commit -m "提交内容"
+		3）上传到github：git push origin master
+		
