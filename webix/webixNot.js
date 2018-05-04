@@ -1,4 +1,4 @@
-1.µ±ÊäÈëµÚÒ»¸öÎÄ±¾¿òºó£¬²ÅÄÜÊäÈëµÚ¶þ¸ö£¬²Ëµ¥Áª¶¯µÄÐ§¹û¿ÉÒÔ¼Ó
+1.å½“è¾“å…¥ç¬¬ä¸€ä¸ªæ–‡æœ¬æ¡†åŽï¼Œæ‰èƒ½è¾“å…¥ç¬¬äºŒä¸ªï¼Œèœå•è”åŠ¨çš„æ•ˆæžœå¯ä»¥åŠ 
 		{ view:"form", elements:[
 			{ type:"header", template:"Enable on select"},
 			{ view:"richselect", label:"Country", options:["Russia", "Germany"],
@@ -6,50 +6,50 @@
 			{ view:"text", id:"sub2", label:"City", disabled:true/hidden:true }
 		]}
 		
-2.Í¼±êÍøÖ·
+2.å›¾æ ‡ç½‘å€
 http://fontawesome.io/icons/
 
-3.²é¿´Ô¶³Ì¶Ë¿ÚÊÇ·ñ¿ªÆô
+3.æŸ¥çœ‹è¿œç¨‹ç«¯å£æ˜¯å¦å¼€å¯
 start /min telnet 192.168.3.42 2121
 
-4.²»ÅäÖÃ»·¾³±äÁ¿Æô¶¯tomcat
-±à¼­tomcat/binÎÄ¼þ¼ÐÏÂµÄcatalina.batÎÄ¼þ£¬ÔÚÎÄ¼þ¿ªÍ·¼ÓÉÏjreÄ¿Â¼µÄÏà¶ÔÂ·¾¶
-set JAVA_HOME="jdkÂ·¾¶"
+4.ä¸é…ç½®çŽ¯å¢ƒå˜é‡å¯åŠ¨tomcat
+ç¼–è¾‘tomcat/binæ–‡ä»¶å¤¹ä¸‹çš„catalina.batæ–‡ä»¶ï¼Œåœ¨æ–‡ä»¶å¼€å¤´åŠ ä¸Šjreç›®å½•çš„ç›¸å¯¹è·¯å¾„
+set JAVA_HOME="jdkè·¯å¾„"
 
-5.0²»ÏÖÊµÏÔÊ¾¿Õ°×
+5.0ä¸çŽ°å®žæ˜¾ç¤ºç©ºç™½
 format:function(value){if(value==0) return ""; else return value;},
 
-6.ÅúÁ¿É¾³ýÍ¼±êicon
+6.æ‰¹é‡åˆ é™¤å›¾æ ‡icon
 	"trash-o"
 	
-7.×Ô¶¯¸ß¶È
+7.è‡ªåŠ¨é«˜åº¦
 	type:{height:"auto"},
 	
-8.1.µ±×Ö·û´®ÖÐÊÇ´¿Êý×Ö
-ÀýÈç£ºvar s = '234';
-¡¡¡¡¡¡/********** ×Ö·û´®ÔÚÔËËã²Ù×÷ÖÐ»á±»µ±×öÊý×ÖÀàÐÍÀ´´¦Àí ***************/¡¡
-¡¡¡¡¡¡s *= 1;  
-¡¡¡¡¡¡/******* stringµÄÁ½¸ö×ª»»º¯Êý£¬Ö»¶ÔstringÓÐÐ§ ********/
-¡¡¡¡¡¡ parseInt(s); // 234
-¡¡¡¡¡¡ parseFloat(s); //234
-¡¡¡¡¡¡/************ Ç¿ÖÆÀàÐÍ×ª»» *********************/
-¡¡¡¡¡¡ Number(s); // 234
+8.1.å½“å­—ç¬¦ä¸²ä¸­æ˜¯çº¯æ•°å­—
+ä¾‹å¦‚ï¼švar s = '234';
+ã€€ã€€ã€€/********** å­—ç¬¦ä¸²åœ¨è¿ç®—æ“ä½œä¸­ä¼šè¢«å½“åšæ•°å­—ç±»åž‹æ¥å¤„ç† ***************/ã€€
+ã€€ã€€ã€€s *= 1;  
+ã€€ã€€ã€€/******* stringçš„ä¸¤ä¸ªè½¬æ¢å‡½æ•°ï¼Œåªå¯¹stringæœ‰æ•ˆ ********/
+ã€€ã€€ã€€ parseInt(s); // 234
+ã€€ã€€ã€€ parseFloat(s); //234
+ã€€ã€€ã€€/************ å¼ºåˆ¶ç±»åž‹è½¬æ¢ *********************/
+ã€€ã€€ã€€ Number(s); // 234
 
 
 
-¨‹¡ø
+â–¼â–²
 
 ${if(len(region) == 0,"","and INSTR('"+region+"', user_ch.region ) > 0 and user_ch.region !=''")}
 
-9.Íê³ÉÂÊ (Êµ¼ÊÍê³ÉÊý/¼Æ»®Íê³ÉÊý)*100%
+9.å®ŒæˆçŽ‡ (å®žé™…å®Œæˆæ•°/è®¡åˆ’å®Œæˆæ•°)*100%
 
-10.mysqlÈ¥µô»Ø³µºÍ»»ÐÐ·û REPLACE(REPLACE(latitude,CHAR(10),''),CHAR(13),'')
+10.mysqlåŽ»æŽ‰å›žè½¦å’Œæ¢è¡Œç¬¦ REPLACE(REPLACE(latitude,CHAR(10),''),CHAR(13),'')
 
 11.format(today(), "yyyy")+"-01"
 
-12.·«Èíµ¼³ö¹ýÂË»»ÐÐ·û=SUBSTITUTE($$$, CHAR(13),"")
+12.å¸†è½¯å¯¼å‡ºè¿‡æ»¤æ¢è¡Œç¬¦=SUBSTITUTE($$$, CHAR(13),"")
 
-13.³µºÅÁÐ±íµã»÷¶Ô½¹ on:{'onItemClick':function(id){this.focus();}},
+13.è½¦å·åˆ—è¡¨ç‚¹å‡»å¯¹ç„¦ on:{'onItemClick':function(id){this.focus();}},
 
-14.Ç¿ÖÆÔ¶³Ì×ÀÃæÍË³ö mstsc /admin
+14.å¼ºåˆ¶è¿œç¨‹æ¡Œé¢é€€å‡º mstsc /admin
 

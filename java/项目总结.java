@@ -1,4 +1,4 @@
-﻿1.单选获取被选中的值
+1.单选获取被选中的值
 var passFlag = $("input[name='passFlag']:checked").val();
 
 $(this).attr("disabled","disabled");
