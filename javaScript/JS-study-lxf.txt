@@ -66,5 +66,6 @@
 		console.log(key); // 'name', 'age', 'city'
 	}
 	
+14.要过滤掉对象继承的属性，用hasOwnProperty()来实现。
 	
 	
