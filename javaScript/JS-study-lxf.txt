@@ -65,7 +65,10 @@
 	for (var key in o) {
 		console.log(key); // 'name', 'age', 'city'
 	}
+	for ... in对Array的循环得到的是String而不是Number。
 	
 14.要过滤掉对象继承的属性，用hasOwnProperty()来实现。
+
+15.while、do ... while（循环完成时判断条件，循环体至少执行一次）
 	
 	
