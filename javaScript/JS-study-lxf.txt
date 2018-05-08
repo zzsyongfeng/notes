@@ -70,5 +70,42 @@
 14.要过滤掉对象继承的属性，用hasOwnProperty()来实现。
 
 15.while、do ... while（循环完成时判断条件，循环体至少执行一次）
+
+16.Map 键值对的结构，具有极快的查找速度  var m = new Map([['Michael', 95], ['Bob', 75], ['Tracy', 85]])二维数组
+	m.get('Michael');	取值
+	m.set('Adam', 67);	存值
+	m.delete('Adam');	删除	多次防值进一个key中，前面的值会把后面的值刷掉
+	
+17.Set 一组key的集合，但不存储value		var s2 = new Set([1, 2, 3]);  不重复存值
+	s.add(4);	添加元素
+	s.delete(3);	删除元素
+	
+	Map和Set是ES6标准新增的数据类型，请根据浏览器的支持情况决定是否要使用
+	
+18. for...in 和for...of    一个遍历的属性数组0，1，2  一个遍历的是元素值数组 w，e，x
+	
+19.iterable		var a = ['A', 'B', 'C'];
+	a.forEach(function (element, index, array) {
+		// element: 指向当前元素的值
+		// index: 指向当前索引
+		// array: 指向Array对象本身
+		console.log(element + ', index = ' + index);
+	});
+	
+	var s = new Set(['A', 'B', 'C']);
+	s.forEach(function (element, sameElement, set) {
+		console.log(element);
+	});
+	
+	var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+	m.forEach(function (value, key, map) {
+		console.log(value);
+	});
+	
+	var a = ['A', 'B', 'C'];
+	a.forEach(function (element) {
+		console.log(element);
+	});
+	
 	
 	
