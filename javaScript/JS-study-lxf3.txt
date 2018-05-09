@@ -1,0 +1,44 @@
+1.面向对象编程   Object.create()方法可以传入一个原型对象，并创建一个基于该原型的新对象，但是新对象什么属性都没有
+	// 原型对象:
+	var Student = {
+		name: 'Robot',
+		height: 1.2,
+		run: function () {
+			console.log(this.name + ' is running...');
+		}
+	};
+
+	function createStudent(name) {
+		// 基于Student原型创建一个新对象:
+		var s = Object.create(Student);
+		// 初始化新对象:
+		s.name = name;
+		return s;
+	}
+
+	var xiaoming = createStudent('小明');
+	xiaoming.run(); // 小明 is running...
+	xiaoming.__proto__ === Student; // true
+	注意：原型链foo ----> Function.prototype ----> Object.prototype ----> null
+	
+2.构造函数  调用的时候在函数前写了new关键字  它就变成了一个构造函数，它绑定的this指向新创建的对象，并默认返回this，也就是说，不需要在最后写return this;。
+	createStudent()函数有几个巨大的优点：一是不需要new来调用，二是参数非常灵活，可以不传，也可以这么传
+	function Student(props) {
+		this.name = props.name || 'Unnamed';
+	}
+
+	Student.prototype.hello = function () {
+		alert('Hello, ' + this.name + '!');
+	}
+	
+3.class继承 
+	class Student {
+		constructor(name) { // 构造函数
+			this.name = name;
+		}
+		hello() {
+			alert('Hello, ' + this.name + '!');
+		}
+	}
+	var xiaoming = new Student('小明');
+	xiaoming.hello();
