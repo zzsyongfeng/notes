@@ -42,3 +42,110 @@
 	}
 	var xiaoming = new Student('小明');
 	xiaoming.hello();
+	
+4.浏览器对象 
+	4.1 window：对象不但充当全局作用域，而且表示浏览器窗口 innerWidth innerHeight
+	4.2 navigator：对象表示浏览器的信息，最常用的属性包括
+		navigator.appName：浏览器名称；
+		navigator.appVersion：浏览器版本；
+		navigator.language：浏览器设置的语言；
+		navigator.platform：操作系统类型；
+		navigator.userAgent：浏览器设定的User-Agent字符串
+		var width = window.innerWidth || document.body.clientWidth;   判断浏览器版本
+	4.3 screen对象表示屏幕的信息，常用的属性有
+		screen.width：屏幕宽度，以像素为单位；
+		screen.height：屏幕高度，以像素为单位；
+		screen.colorDepth：返回颜色位数，如8、16、24。
+	4.4 location: 对象表示当前页面的URL信息
+		location.protocol; // 'http'
+		location.host; // 'www.example.com'
+		location.port; // '8080'
+		location.pathname; // '/path/index.html'
+		location.search; // '?a=1&b=2'
+		location.hash; // 'TOP'
+		location.href
+		location.assign()	加载一个新页面
+		location.reload()	重新加载当前页面
+	4.5 document：表示当前页面
+		document.title = '努力学习JavaScript!';
+		getElementById()、getElementsByTagName()、
+		document对象还有一个cookie属性，可以获取当前页面的Cookie
+		为了解决这个问题，服务器在设置Cookie时可以使用httpOnly，设定了httpOnly的Cookie将不能被JavaScript读取。这个行为由浏览器实现，主流浏览器均支持httpOnly选项，IE从IE6 SP1开始支持。 为了确保安全，服务器端在设置Cookie时，应该始终坚持使用httpOnly。
+	4.6 history：对象保存了浏览器的历史记录
+		back()、forward ()
+		
+5.操作DOM：树形结构
+	更新：更新该DOM节点的内容，相当于更新了该DOM节点表示的HTML的内容；var p = document.getElementById('p-id'); p.innerHTML = 'ABC'; p.innerText = '<script>alert("Hi")</script>'
+	// 设置CSS:
+	p.style.color = '#ff0000';
+	p.style.fontSize = '20px';
+	p.style.paddingTop = '2em';
+	遍历：遍历该DOM节点下的子节点，以便进行进一步操作；
+	添加：在该DOM节点下新增一个子节点，相当于动态增加了一个HTML节点；
+	var
+    js = document.getElementById('js'),
+    list = document.getElementById('list');
+	list.appendChild(js)
+	删除：将该节点从HTML中删除，相当于删掉了该DOM节点的内容以及它包含的所有子节点。
+	
+6.操作表单
+	文本框，对应的<input type="text">，用于输入文本；
+	口令框，对应的<input type="password">，用于输入口令；
+	单选框，对应的<input type="radio">，用于选择一项；
+	复选框，对应的<input type="checkbox">，用于选择多项；
+	下拉框，对应的<select>，用于选择一项；
+	隐藏文本，对应的<input type="hidden">，用户不可见，但表单提交时会把隐藏文本发送到服务器。
+	6.1 获取值
+		var input = document.getElementById('email');
+		input.value; // '用户输入的值'
+	6.2 设置值
+		var input = document.getElementById('email');
+		input.value = 'test@example.com'; // 文本框的内容已更新
+	6.3 HTML5控件
+		<input type="date" value="2015-07-01">
+		<input type="datetime-local" value="2015-07-01T02:03:04">
+		<input type="color" value="#ff0000">
+	6.4 提交表单
+		方式一是通过<form>元素的submit()方法提交一个表单
+			function doSubmitForm() {
+				var form = document.getElementById('test-form');
+				// 可以在此修改form的input...
+				// 提交form:
+				form.submit();
+			}
+			
+			<!-- HTML -->
+			<form id="test-form" onsubmit="return checkForm()">
+				<input type="text" name="test">
+				<button type="submit">Submit</button>
+			</form>
+
+			<script>
+			function checkForm() {
+				var form = document.getElementById('test-form');
+				// 可以在此修改form的input...
+				// 继续下一步:
+				return true;
+			}
+			
+			<!-- HTML -->
+			<form id="login-form" method="post" onsubmit="return checkForm()">
+				<input type="text" id="username" name="username">
+				<input type="password" id="input-password">
+				<input type="hidden" id="md5-password" name="password">
+				<button type="submit">Submit</button>
+			</form>
+
+			<script>
+			function checkForm() {
+				var input_pwd = document.getElementById('input-password');
+				var md5_pwd = document.getElementById('md5-password');
+				// 把用户输入的明文变为MD5:
+				md5_pwd.value = toMD5(input_pwd.value);
+				// 继续下一步:
+				return true;
+			}
+			</script>
+			
+7.操作文件			
+	
