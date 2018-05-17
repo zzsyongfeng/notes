@@ -148,4 +148,20 @@
 			</script>
 			
 7.操作文件			
+	<input type="file">
+	注意：当一个表单包含<input type="file">时，表单的enctype必须指定为multipart/form-data，method必须指定为post，浏览器才能正确编码并以multipart/form-data格式发送表单的数据。
+	1.1 检查上传的文件名格式
+		var f = document.getElementById('test-file-upload');
+		var filename = f.value; // 'C:\fakepath\test.png'
+		if (!filename || !(filename.endsWith('.jpg') || filename.endsWith('.png') || filename.endsWith('.gif'))) {
+			alert('Can only upload image file.');
+			return false;
+		}
+		
+8.AJAX JavaScript执行异步网络请求
+	Web的运作原理：一次HTTP请求对应一个页面
+	
+	
+
+
 	
