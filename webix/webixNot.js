@@ -14,7 +14,7 @@ start /min telnet 192.168.3.42 2121
 
 4.不配置环境变量启动tomcat
 编辑tomcat/bin文件夹下的catalina.bat文件，在文件开头加上jre目录的相对路径
-set JAVA_HOME="jdk路径"
+set JAVA_HOME=D:\Program Files\Java\jdk1.7.0_79
 
 5.0不现实显示空白
 format:function(value){if(value==0) return ""; else return value;},
